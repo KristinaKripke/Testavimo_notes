@@ -1,6 +1,6 @@
 TC requirements: 
     1. ID
-    2. Description 
+    2. Summary/Title
     3. Steps
     4. Expected result
     5. Actual result
