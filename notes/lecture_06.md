@@ -40,3 +40,34 @@ STLC - software testing lifecycle
 
 PO - project owner 
 
+Product and project companies
+
+Requirements:
+    1. Customer requirements
+    2. System requirements
+    3. Programming specification
+
+build v0.0.1 
+ > registration fn
+
+ build v0.0.2 
+ > registration fn (old)
+ > fixed bugs
+ > login fn
+
+ build v0.0.3
+ > registration fn (old)
+ > login fn (old)
+ > fixed bugs
+ > item catalog fn
+
+Waterfall: linear and sequential. Each phase (e.g. requirements -> design -> implementation -> testing -> maintenance) must be completed before the next one begins.
+
+Agile: Iterative and incremental. Development is done in small cycles (sprints), and features are delivered continuously.
+
+Testing: 
+> Waterfall: Testing happens after development is complete 
+> Agile: Testing happens continously during development
+
+
+
