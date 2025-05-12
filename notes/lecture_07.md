@@ -13,7 +13,7 @@ Kai automatiniai testai randa klaidas, reikia jas pertikrinti rankiniu būdu.
 Core and secondary functionalities
 
  - Smoke test:
-Tikslas - patikrinti ar produktas yra tinkamas testavimui, tikrinant tik pagrindines funkcijas
+Tikslas - patikrinti ar produktas yra tinkamas testavimui, tikrinant tik pagrindines funkcijas.
 
 Happy path -> only positive tests in core functionalities
 (atliekami po kievieno build'o, dazniausiai automatizuoti)
