@@ -16,8 +16,6 @@ Testavimo planas yra dideles apimties dokumentas:
 7. Environment (product/dev/testing) (atskira erdve, kurioje vystomas produktas, kuris veliau iliejamas i vartotojo versija)
 8. Mitigation (rizikos valdymas)
 
-
-
 Exit criteria - when to finish testing
 Testing has no end 
 Kai defektai yra tik low severity ir ju jau nebedaug
@@ -32,4 +30,17 @@ Severity - defektu lygiai
 
 ## 2. Checklist
 
-## 3. Smoke testing
+TC sarasas
+Daznai skirstomas i funkcinius ir nefunkcinius
+Itraukiamas Expected result
+
+* Supaprastintas TC formatas, kad nieko nepamirstum testavimo metu
+* Uztikrina, kad visi esminiai aspektai buvo patikrinti
+* Pagreitina testavima - ypac kai testavimo procesas kartojasi
+
+Dazniausiai naudijami: 
+* Smoke testing (ar pagrindines funkcijos veikia?)
+* Regression testing
+* Pries release
+* Acceptance testing 
+* Sanity testing (Ar konkretus pakeitimas nesugadino kitu funkciju?)
