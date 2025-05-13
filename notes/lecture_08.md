@@ -13,7 +13,7 @@ Testavimo planas yra dideles apimties dokumentas:
 4. Severities
 5. Additional documentation(glossary, TS/TC by customer, business logic included in TC)
 6. Exit criteria
-7. Environment (product/dev/testing) (atskira erdve, kurioje vystomas produktas, kuris veliau iliejamas i vartotojo versija)
+7. Environment (production/dev/testing) (atskira erdve, kurioje vystomas produktas, kuris veliau iliejamas i vartotojo versija)
 8. Mitigation (rizikos valdymas)
 
 Exit criteria - when to finish testing
@@ -38,7 +38,7 @@ Itraukiamas Expected result
 * Uztikrina, kad visi esminiai aspektai buvo patikrinti
 * Pagreitina testavima - ypac kai testavimo procesas kartojasi
 
-Dazniausiai naudijami: 
+Dazniausiai naudojami: 
 * Smoke testing (ar pagrindines funkcijos veikia?)
 * Regression testing
 * Pries release
