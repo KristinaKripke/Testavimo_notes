@@ -23,7 +23,8 @@ Keletas poziurio tasku:
 1. Programuotojas
 2. Testuotojas
 3. PO - project owner
-4. Klientas
+4. Klientas 
+5. Vartotojas
 
 Workaround -> funkcionalumo apejimas
 
@@ -42,7 +43,7 @@ Severities:
 * Medium 
     Svarbus defektas, kuris daro pastebima itaka sistemos funkcionalumui, bet vis dar imanoma naudotis sistema. 
     Pvz. neveikiantis konkretus funkcionalumas, neteisingai pateikiami duomenys. 
-    Dazniausiai susijes su salutinemis funkcijomis, workaround lengvai atlieka pats vartotojas, klaidos gaunamos is negatyviu testu, UI/UX grubios klaidos.
+    Dazniausiai susijes su salutinemis funkcijomis, workaround lengvai atlieka pats vartotojas, klaidos gaunamos is negatyviu testu, UI/UX labai grubios klaidos.
 
 * Low
     Daro minimalia itaka sistemos veikima arba neturi jokios itakos funkcionalumui, bet gali buti vizualine ar kosmetine klaida. 
@@ -53,8 +54,14 @@ Severities:
 1. New 
 2. Assigned 
 3. Open
+    * Duplicate - gali buti registruota ta pati klaida, todel viena naikinama
+    * Rejected - kartais klaidos mistiskai dingsta (istaisomos niekam nieko nesakius)
+    * Deferred - problema zinoma, bet dabar netaisoma
+    * Not a bug - 'plaukiojancios klaidos', kurios sunkiai pakartojamos
 4. Fixed
 5. Pending retest
 6. Retest
 7. Verified
 8. Closed (sanity testing must be performed)
+
+Sanity testai daromi, nes yra didele tikimybe, kad susijusiose funkcijose gali ivykti regresija. 
