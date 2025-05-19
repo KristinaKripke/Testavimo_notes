@@ -9,6 +9,7 @@ Balsavimo biuletenis (balsuoti gali asmuo nuo 18m iki 50m):
 galima ikelti iki 20 nuotrauku:
 [1, 20, 21]
 
+https://www.alphabin.co/blog/boundary-value-analysis-in-software-testing  
 
 ### Pesticide paradox
 

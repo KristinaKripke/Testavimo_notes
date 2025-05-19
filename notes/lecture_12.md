@@ -5,6 +5,7 @@ Client - server architecture
 Web app - turi daug interaktyvumo 
 Web page - daugiau informacinio turinio, interaktyvumo nera daug
 
+[Pixel editor](https://pixlr.com/editor/)
 
 Monolitic architecture - visi programiniai komponentai yra vienoj vietoj. Jei kazkas neveikia, greiciausiai neveiks visa programa. Jei yra atnaujinimas, turi buti atnaujinta visa sistema. Pliusai - viskas veikia greiciau; saugesne sistema.
 
@@ -57,3 +58,16 @@ http methods:
 
 Documentation is mandatory for API.
 We must know all the information: where and how to connect, what actions to perform, what kind of metadata to use.
+
+base url -> https://petstore.swagger.io/v2
+endpoint -> /store/inventory
+https://petstore.swagger.io/v2/store/inventory
+
+## Postman
+
+[ondanto api](https://verifid.ondato.com/swagger/index.html)  
+[railbank api](https://docs.railsr.com/)  
+[Post api](https://postapi.lt/documentation)  
+[LP api](https://www.post.lt/api-verslui)  
+[Petstore api](https://petstore.swagger.io/) 
+[jsonplaceholder](https://jsonplaceholder.typicode.com) 
