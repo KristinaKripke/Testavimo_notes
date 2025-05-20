@@ -1,6 +1,6 @@
 ### FE (front-end) vs BE (back-end)
 
-Client - server architecture
+Client - server architecture 
 
 Web app - turi daug interaktyvumo 
 Web page - daugiau informacinio turinio, interaktyvumo nera daug
@@ -37,7 +37,7 @@ base_url + endpoint
 
 Client request messages:
 1. starting line
-    1. req method: GET, POST, PUT, DELETE
+    1. req method: GET, POST, PUT, DELETE (http metodai)
     2. url -> base_url + endpoint
 2. header -> metadata (kiek duomenu, kokiu formatu mums reikia)
 3. body: JSON (duomenys) -> POST, PUT, PATCH
