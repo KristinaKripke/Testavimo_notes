@@ -13,6 +13,22 @@ Https - duomenys matomi, bet uzkoduoti (secure)
 https://newsapi.org/docs
 https://newsapi.org/v2/everything?q=keyword&apiKey=e0a3607fc5434618980712ba0796d335
 
+```json
+{
+    "id": 456,
+    "name": "Some name",
+    "key01": "value01",
+}
+```
+
+baseUrl = example.com
+{baseUrl}/v1/booking/:id
+{baseUrl}/v1/booking/{id}
+
+{baseUrl}/v1/{id}/booking/
+example.com/v1/456/booking/
+
+
 ## Request queries
 ? -> indicates query
 & -> 'and' require to combine different request into one query
