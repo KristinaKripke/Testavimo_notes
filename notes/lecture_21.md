@@ -4,17 +4,24 @@ http://localhost:3011/
 Endpoints:
 
 GET:
-/users -> list of users
-/users/:userId  -> by user id
+    /users -> list of users
+    /users/:userId  -> by user id
+
+Examples: 
+    userId = 2
+    http://localhost:3011/somename/:userId/users -> http://localhost:3011/somename/2/users 
+    http://localhost:3011/somename/{userId}/users -> http://localhost:3011/somename/2/users
 
 POST:
-/users 
+    /users 
 
 PUT
-/users/:userId
+    /users/:userId
 
 PATCH
-/users/:userId
+    /users/:userId
 
 DELETE
-/users/:userId
+    /users/:userId
+
+Breaking change - pakeitimai kai vartotojas nebegali pasiekti puslapio
