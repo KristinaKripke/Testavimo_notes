@@ -1,0 +1,126 @@
+-- KOMENTARAS
+/* 
+Komentaras
+*/
+-- SELECT, FROM:
+
+	select 'sveikas', 'pasauli';
+	SELECT 'hello', 'world';
+
+	select 'sveikas', 'pasauli', null
+	union
+	SELECT 'hello', 'world', 'antradienis'
+	union
+	SELECT 'bonjour', 'la', 'monde';
+
+
+	select * from actor;
+
+	select first_name as Vardas, last_name from actor;
+	select first_name, last_name "Pavarde" from actor;
+
+	select first_name, LOWER(first_name) Vardas, UPPER(last_name) "Pavarde" from actor;
+
+-- WHERE
+
+	select * from country;
+	select * from country where country = 'Lithuania';
+	select * from country where country = 'France';
+	select * from country where country = 'Lithuania' or country = 'France';
+	
+	select * from country where country = 'Lithuania'
+	union
+	select * from country where country = 'France';
+
+	select * from city where country_id = 56;
+	select * from city where country_id = 103;
+
+	select * from city where country_id = (select country_id from country where country = 'France');
+
+	/*
+    Logical operators
+    >, <, >=, <=, =, <> or !=
+ 
+    AND, OR
+    &&, ||
+*/
+
+ SELECT * FROM city
+    WHERE country_id = 103 AND city_id >= 400 AND city_id <= 499
+	order by city_id desc;
+
+select country_id, city_id, city from city
+	order by 1 desc;
+
+-- BETWEEN AND 
+	select country_id, city_id, city from city
+	WHERE country_id = 103 AND city_id between 400 and 499;
+
+	select country_id, city_id, city from city
+    WHERE country_id = 103 AND (city_id < 400 or city_id > 499);
+
+	select country_id, city_id, city from city
+	WHERE country_id = 103 AND city_id not between 400 and 499;
+
+-- IN()
+
+	select * from city where country_id = 103;
+	
+	select * from city where country_id = 103 and city_id in(33, 42, 94, 435, 508);
+	select * from city where country_id = 103 and city_id not in(33, 42, 94, 435, 508);
+
+-- LIKE 
+
+	select * from city where city like 'W%';
+	select * from city where city like '%s';
+	select * from city where city like '% %';
+	select * from city where city like '% %' and city not like '% % %';
+	select * from city where city like '_a%';
+	select * from city where city like '%e__';
+
+/*
+	Agregation functions:
+	count(), min(), max(), sum(), avg()
+*/
+	select count(city_id) from city where country_id = 103;
+	select count(city_id), min(city_id), max(city_id), sum(city_id), avg(city_id) from city where country_id = 103;
+	
+	select * from film;
+	
+	select rating, rental_duration, count(*), min(replacement_cost) from film 
+	group by rating, rental_duration 
+	order by rating desc, rental_duration desc;
+
+	SELECT 
+		rating, 
+		rental_duration, 
+		count(*), 
+		min(replacement_cost),
+		max(replacement_cost),
+		max(replacement_cost) - min(replacement_cost) AS "diference"
+	FROM film 
+	GROUP BY rating, rental_duration 
+	ORDER BY rating DESC, rental_duration DESC;
+ 
+-- HAVING
+
+	SELECT 
+		rating, 
+		count(*) AS total_count, 
+		min(replacement_cost),
+		max(replacement_cost),
+		max(replacement_cost) - min(replacement_cost) AS "diference",
+		rental_duration 
+	FROM film
+	WHERE title like 'A%'
+	-- GROUP BY rating, rental_duration 
+	-- GROUP BY 1,2 
+	GROUP BY 1,6 
+	HAVING count(*) >= 3
+	ORDER BY rating DESC, rental_duration DESC;
+
+	
+ 
+	
+
+	
