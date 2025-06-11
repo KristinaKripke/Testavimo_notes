@@ -190,7 +190,40 @@ select country_id, city_id, city from city
 
  -- JOIN
 
- 	
-	
+ 	select * from film; -- film_id
+	select * from film_category; -- film_id, category_id
+	select * from category; -- category_id
 
+	select * from film as f
+	join film_category as fc on f.film_id = fc.film_id;  
+
+	select f.film_id, f.title, c.category_id, c.name from film f
+	join film_category fc on f.film_id = fc.film_id
+	join category c on c.category_id = fc.category_id;
+
+	select f.film_id, f.title, c.category_id, c.name from film f
+	join film_category fc on f.film_id = fc.film_id
+	join category c on c.category_id = fc.category_id
+	where c.name = 'Documentary';
+
+	select * from film; -- language_id
+	select * from language; --language_id
+
+-- INNER JOIN (duomenys jungiasi vieni su kitais)
+	select f.film_id, f.title, l.language_id, l.name from film f
+	join language l on l.language_id = f.language_id;
+
+	
+--NOT INNER JOIN
+	select f.film_id, f.title, l.language_id, l.name from film f
+	join language l on l.language_id = f.language_id
+	where l.name not in ('English');
+
+--LEFT JOIN
+	select f.film_id, f.title, l.language_id, l.name from language l
+	left join film f on l.language_id = f.language_id
+	where l.name not in ('English');
+
+	
+	
 	

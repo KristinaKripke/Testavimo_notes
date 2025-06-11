@@ -15,3 +15,4 @@ SQL tables:
 1. One2One
 2. One2Many, Many2One
 3. Many2Many (linked table -> tarpine lentele)
+    example: film -> film_actor(film_id, actor_id) <- actor
