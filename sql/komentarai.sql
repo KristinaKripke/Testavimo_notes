@@ -119,8 +119,78 @@ select country_id, city_id, city from city
 	HAVING count(*) >= 3
 	ORDER BY rating DESC, rental_duration DESC;
 
+-- DISTINCT
+
+	SELECT count(*) COUNT FROM actor;
+	SELECT first_name FROM actor;
 	
- 
+	SELECT DISTINCT first_name FROM actor;
+	SELECT count(distinct first_name) from actor;
+
+	select distinct first_name, last_name from actor;
+
+	select first_name, last_name, count(*) from actor group by 1, 2 having count(*) > 1;
+
+-- ARRAY
+
+	select film_id, title, special_features from film;
+
+	select film_id, title, special_features[1], special_features[4] from film order by 4;
+	
+	select film_id, title, special_features from film
+	where special_features[1] = 'Commentaries';
+	
+	select film_id, title, special_features from film
+	where special_features[1] like 'C%';
+
+	select distinct special_features from film
+	where special_features[1] like 'C%';
+
+	select title, special_features from film
+	where special_features[4] like 'B%';
+
+	select title, special_features from film
+	where special_features[3] is null;
+
+	select title, special_features from film
+	where 'Behind the Scenes' = any(special_features);
+
+/* 
+	MySQL date_formatter()
+	PostgreSQL to_char()
+*/
+
+	select * from rental;
+
+	select rental_id, rental_date, date_part('day', rental_date) from rental;
+	
+	select rental_id, rental_date from rental
+	where date_part('year', rental_date) = 2006;
+
+	select rental_id, rental_date from rental
+	where date_part('year', rental_date) = 2005 and date_part('month', rental_date) = 6;
+
+	select rental_id, rental_date from rental
+	where to_char(rental_date, 'YYYY') = '2006';
+
+	select rental_id, rental_date from rental
+	where to_char(rental_date, 'MM') = '06';
+
+	select rental_id, rental_date from rental
+	where to_char(rental_date, 'YYYY-MM') = '2005-05';
+
+	select rental_id, rental_date from rental
+	where to_char(rental_date, 'YYYY MM HH24') = '2005 05 23';
+
+	select rental_id, rental_date, to_char(rental_date, 'HH -> HH24') from rental
+	where to_char(rental_date, 'YYYY MM HH24') = '2005 05 23';
+
+	select rental_id, rental_date from rental
+	where cast(to_char(rental_date, 'YYYY') as integer) = 2006;
+
+ -- JOIN
+
+ 	
 	
 
 	

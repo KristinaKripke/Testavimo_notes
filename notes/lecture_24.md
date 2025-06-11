@@ -9,3 +9,9 @@ SQL tables:
 2. column names (static)
 3. rows (dynamic)
 4. values - tuleq
+
+### Table join
+
+1. One2One
+2. One2Many, Many2One
+3. Many2Many (linked table -> tarpine lentele)
