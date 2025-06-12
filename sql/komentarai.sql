@@ -224,6 +224,7 @@ select country_id, city_id, city from city
 	left join film f on l.language_id = f.language_id
 	where l.name not in ('English');
 
+
 	
 	
 	
